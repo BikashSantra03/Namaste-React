@@ -48,6 +48,8 @@
   width: 200px;
   padding: 5px;
   border: 1px solid transparent;
+  background-color: antiquewhite;
+  border-radius: 15px;
 }
 .itemdetails{
   display: flex;
@@ -63,6 +65,7 @@
 
 .res-card > img {
   width: 100%;
+  object-fit: fit;
 }
 
 
@@ -80,8 +83,11 @@
 .search-container button {
   padding: 10px 15px;
   cursor: pointer;
+  
 }
-
+.search-container label{
+  cursor: pointer;
+}
 
 .footer {
   padding: 20px 10px;
