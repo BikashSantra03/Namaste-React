@@ -1,16 +1,32 @@
-import { useState } from "react";
-import { resList } from "../utils/mockData";
+import { useEffect, useState } from "react";
+
 import RestaurantCard from "./RestaurentCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
-  // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
-  // * useState() - Super Powerful variable
-  // * useEffect() -
+  const [listOfRestraunt, setListOfRestraunt] = useState([]);
 
-  // * State variable - Super Powerful variable
-  const [listOfRestraunt, setListOfRestraunt] = useState(resList);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  return (
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&collection=83631&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+    );
+    const apiData = await data.json();
+    console.log(apiData);
+
+    const filteredApiData = apiData.data.cards.slice(3);
+
+    console.log(filteredApiData);
+
+    setListOfRestraunt(filteredApiData);
+  };
+
+  return listOfRestraunt.length === 0 ? (
+    <Shimmer/>
+  ) : (
     <div className="body">
       <div className="search-container">
         <input
@@ -21,7 +37,9 @@ const Body = () => {
         <button
           onClick={() => {
             setListOfRestraunt(
-              listOfRestraunt.filter((res) => res.data.avgRating > 4)
+              listOfRestraunt.filter(
+                (res) => res.card.card.info.avgRating >= 4.3
+              )
             );
           }}
         >
@@ -31,7 +49,7 @@ const Body = () => {
 
       <div className="cards-container">
         {listOfRestraunt.map((items) => (
-          <RestaurantCard key={items?.data.id} resData={items} />
+          <RestaurantCard key={items?.card.card.info.id} resData={items} />
         ))}
       </div>
     </div>

@@ -51,7 +51,23 @@
   background-color: antiquewhite;
   border-radius: 15px;
 }
-.itemdetails{
+.shimmerclass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 0 40px;
+}
+.shimmer-card {
+  width: 200px;
+  height: 300px;
+  padding: 5px;
+  border: 1px solid transparent;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}
+
+.itemdetails {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -68,7 +84,6 @@
   object-fit: fit;
 }
 
-
 .search-container {
   display: flex;
   justify-content: center;
@@ -83,9 +98,8 @@
 .search-container button {
   padding: 10px 15px;
   cursor: pointer;
-  
 }
-.search-container label{
+.search-container label {
   cursor: pointer;
 }
 
