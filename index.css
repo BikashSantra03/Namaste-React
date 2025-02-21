@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.app{
+  text-align: center;
+}
 .header {
   display: flex;
   justify-content: space-between;
