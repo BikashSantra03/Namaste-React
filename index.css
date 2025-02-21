@@ -25,16 +25,39 @@
 .logo:hover {
   cursor: pointer;
 }
-.navitems {
+.navitems>ul{
+  
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   gap: 2em;
   margin-right: 2rem;
   font-weight: bold;
-}
-.navitems :hover {
+  text-align: center;
+}.login-btn {
+  background-color: orange;
+  border-radius: 5px;
+  padding: 7px 15px;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
   cursor: pointer;
+  scale: 1;
+   transition: scale 0.2s ease-in;
+}
+
+
+
+.navitems>ul :hover {
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #f6bb4d;
+  scale: 1.1;
+
 }
 
 .cards-container {
@@ -84,24 +107,22 @@
   object-fit: fit;
 }
 
-.search-container {
+.filter {
   display: flex;
   justify-content: center;
   margin: 50px 0;
   gap: 10px;
 }
 
-.search-container input {
+.filter input {
   min-width: 250px;
   padding: 10px;
 }
-.search-container button {
+.filter button {
   padding: 10px 15px;
   cursor: pointer;
 }
-.search-container label {
-  cursor: pointer;
-}
+
 
 .footer {
   padding: 20px 10px;
@@ -110,3 +131,4 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
