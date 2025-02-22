@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
+import RestaurantMenu from "./components/RestaurantMenu";
+import CartPage from "./components/CartPage";
 
 const AppLayout = () => {
   return (
@@ -29,6 +31,8 @@ root.render(
         <Route index element={<Body />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="cart" element={<CartPage />} />
+        <Route path="restaurants/:resid" element={<RestaurantMenu />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

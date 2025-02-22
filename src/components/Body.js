@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import NotFound from "./NotFound";
+import { swiggyApi } from "../utils/constatnt";
+import { Link } from "react-router";
 
 const Body = () => {
   const [listOfRestraunt, setListOfRestraunt] = useState([]);
@@ -15,9 +17,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&collection=83631&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
-    );
+    const data = await fetch(swiggyApi);
     const apiData = await data.json();
     // console.log(apiData);
 
@@ -42,6 +42,7 @@ const Body = () => {
       handleSearch();
     }
   };
+
   return listOfRestraunt.length === 0 ? (
     <Shimmer />
   ) : (
@@ -80,13 +81,26 @@ const Body = () => {
       <div className="cards-container">
         {filteredData === null ? (
           listOfRestraunt.map((res) => (
-            <RestaurantCard key={res?.card.card.info.id} resData={res} />
+            <Link
+              key={res?.card.card.info.id}
+              to={"/restaurants/" + res?.card.card.info.id}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <RestaurantCard resData={res} />
+            </Link>
           ))
         ) : filteredData.length === 0 ? (
           <NotFound />
         ) : (
           filteredData.map((res) => (
-            <RestaurantCard key={res?.card.card.info.id} resData={res} />
+            <Link
+              key={res?.card.card.info.id}
+              to={"/restaurants/" + res?.card.card.info.id}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              {" "}
+              <RestaurantCard key={res?.card.card.info.id} resData={res} />{" "}
+            </Link>
           ))
         )}
       </div>

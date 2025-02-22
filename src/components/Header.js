@@ -7,24 +7,43 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="logo-container">
-        <img src={LOGO_URL} className="logo" />
-      </div>
+      <Link to="/">
+        <div className="logo-container">
+          <img src={LOGO_URL} className="logo" />
+        </div>
+      </Link>
 
       <div className="navitems">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              Home
+            </Link>
           </li>
           <li>
             {" "}
-            <Link to="/about">About Us</Link>{" "}
+            <Link
+              to="/about"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              About Us
+            </Link>{" "}
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <Link
+              to="/contact"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Contact Us
+            </Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link
+              to="/cart"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Cart
+            </Link>
           </li>
 
           <button
