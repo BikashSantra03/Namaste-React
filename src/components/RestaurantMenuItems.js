@@ -15,8 +15,8 @@ const RestaurantMenuItems = (props) => {
   const [isExpanded, setIsExpanded] = useState(false); // state for more button
 
   const shortDescription =
-    description?.length > 100
-      ? description.substring(0, 100) + "..."
+    description?.length > 50
+      ? description.substring(0, 50) + "..."
       : description;
 
   return (
@@ -26,7 +26,7 @@ const RestaurantMenuItems = (props) => {
         <h3>{name}</h3>
         <h4>
           {!isExpanded ? shortDescription : description}
-          {description.length > 100 && (
+          {description?.length > 50 && (
             <span onClick={() => setIsExpanded(!isExpanded)}>
               {isExpanded ? "less" : "more"}
             </span>
