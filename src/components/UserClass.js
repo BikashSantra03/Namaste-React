@@ -47,22 +47,35 @@ export default UserClass;
 
 {
   /*
-  # React Life Cycle phases
-    
-    --parent  consturctor
-    -- Parent  render
+  @ React Life Cycle phases
 
-    --First Child constructor
-    --First Child render
+    # Mounting Phase --------->
+    --parent  consturctor() called
+    -- Parent  render() called
 
-    --Secone Child constructor
-    --Secone Child render
+    --First Child constructor() called  (If props given then values initialized a/c to props)
+    --First Child render() called with default values of state variables (If state variable used)
+
+    --Second Child constructor() called  (If props given then values initialized a/c to props)
+    --Second Child render() called with default values of state variables (If state variable used)
+
 
     -- <DOM  updated in a single batch --> as DOM manupulation is expensive>
 
 
-    --Secone Child ComponentDidMount
-    --Secone Child ComponentDidMount
+    --Parent ComponentDidMount()
+    -- First Child ComponentDidMount   (API call happens, State variable updated as we used setState in ComponentDidMount())
+    -- Secone Child ComponentDidMount    (API call happens, State variable updated as we used setState in ComponentDidMount())
 
+     # Updating Phase --------->
+     
+     -- Render() is called with API data
+     -- HTML is Loaded with new API data
+
+     -- Parent componentDidUpdate() is called
+     -- First Child componentDidUpdate() is called
+     -- Secone Child componentDidUpdate() is called
+
+LINK : https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 */
 }
