@@ -1,43 +1,46 @@
-import React, { Component } from "react";
+import React from "react";
+import { githubUserAPI } from "../utils/constatnt";
 
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0,
-      //   count2: 0,
+      userInfo: { name: "Manu", html_url: "", location: "" },
     };
 
-    console.log(this.props.Name + " Child Component constructor");
+    console.log(" Child Component constructor");
   }
 
-  componentDidMount() {
-    console.log(this.props.Name + " Child component did Mounted");
-  }
+  async componentDidMount() {
+    const data = await fetch(githubUserAPI);
+    const jsonData = await data.json();
 
+    this.setState({
+      userInfo: jsonData,
+    });
+
+    console.log("Child component Did Mount")
+  }
+  componentDidUpdate() {
+    console.log("Child Component did updated");
+  }
   render() {
-    const { Name, Location, Contact } = this.props;
-    const { count } = this.state;
+    const { contact } = this.props;
+    const { name, html_url, location } = this.state.userInfo;
 
-    console.log(Name + " Child component rendered");
+    console.log(name + " Child component rendered");
     return (
       <div className="about">
-        <h2>{Name}</h2>
-        <h3>Location: {Location}</h3>
-        <h3>{Contact}</h3>
-        <p>{count}</p>
-
-        <button
-          className="add-item-button"
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Count
-        </button>
+        <h2>{name}</h2>
+        <h3>Location: Kolkata, {location}</h3>
+        <h3>Mobile: {contact}</h3>
+        <h3>
+          Github:{" "}
+          <a href={html_url} target="_main">
+            {html_url}
+          </a>
+        </h3>
       </div>
     );
   }
@@ -45,24 +48,63 @@ class UserClass extends React.Component {
 
 export default UserClass;
 
+//---------------------------------------------------------------------------------------------------------------------
+
+{
+  /* # React Life Cycle phases ==> Using Functional Component
+import { useEffect } from "react";
+
+const UserClass = (props) => {
+  const { Name, Location, Contact } = props;
+  useEffect(() => {
+    console.log(Name+"Child component useEffect");
+  }, []);
+
+  console.log( Name  + "child component rendered");
+  return (
+    <div className="about">
+      <h2>{Name}</h2>
+      <h3>Location: {Location}</h3>
+      <h3>{Contact}</h3>
+    </div>
+  );
+};
+ export default UserClass; */
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
 {
   /*
-  # React Life Cycle phases
-    
-    --parent  consturctor
-    -- Parent  render
+  @ React Life Cycle phases
 
-    --First Child constructor
-    --First Child render
+    # Mounting Phase --------->
+    --parent  consturctor() called
+    -- Parent  render() called
 
-    --Secone Child constructor
-    --Secone Child render
+    --First Child constructor() called  (If props given then values initialized a/c to props)
+    --First Child render() called with default values of state variables (If state variable used)
+
+    --Second Child constructor() called  (If props given then values initialized a/c to props)
+    --Second Child render() called with default values of state variables (If state variable used)
+
 
     -- <DOM  updated in a single batch --> as DOM manupulation is expensive>
 
 
-    --Secone Child ComponentDidMount
-    --Secone Child ComponentDidMount
+    --Parent ComponentDidMount()
+    -- First Child ComponentDidMount   (API call happens, State variable updated as we used setState in ComponentDidMount())
+    -- Secone Child ComponentDidMount    (API call happens, State variable updated as we used setState in ComponentDidMount())
 
+     # Updating Phase --------->
+     
+     -- Render() is called with API data
+     -- HTML is Loaded with new API data
+
+     -- Parent componentDidUpdate() is called
+     -- First Child componentDidUpdate() is called
+     -- Secone Child componentDidUpdate() is called
+
+LINK : https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 */
 }

@@ -12,7 +12,7 @@ const RestaurantCard = (props) => {
     <div className="res-card">
       <img src={Card_IMG_URL + cloudinaryImageId} alt="pizza" />
       <div className="itemdetails">
-        <h3>{name}</h3>
+        <h3>{name.toUpperCase()}</h3>
         <h4>{cuisines.join(", ")}</h4>
         <h4>{avgRating}⭐</h4>
         <h4>{costForTwo}</h4>

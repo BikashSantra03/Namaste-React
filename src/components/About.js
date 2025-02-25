@@ -12,6 +12,10 @@ class About extends Component {
     console.log("Parent component did Mounted");
   }
 
+  componentDidUpdate() {
+    console.log("Parent Component did updated");
+  }
+
   render() {
     console.log("Parent component rendered");
 
@@ -19,14 +23,14 @@ class About extends Component {
       <div className="aboutpage">
         <h2>About Namaste React Series</h2>
         <UserClass
-          Name={"Bikash Santra"}
-          Location="Kolkata-711409"
-          Contact="+916289951539"
+          name={"Bikash Santra"}
+          location="Kolkata-711409"
+          contact="+916289951539"
         />
         <UserClass
-          Name={"Manu Santra"}
-          Location="Kolkata-711409"
-          Contact="+919475835755"
+          name={"Bikash Santra"}
+          location="Kolkata-711409"
+          contact="+916289951539"
         />
       </div>
     );
@@ -34,3 +38,39 @@ class About extends Component {
 }
 
 export default About;
+
+//---------------------------------------------------------------------------------------------------------------------
+
+{
+  /* # React Life Cycle phases ==> Using Functional Component
+import { useEffect } from "react";
+
+const About = () => {
+
+  useEffect(() => {
+    console.log("Parent component useEffect");
+  }, []);
+
+
+  console.log("Parent component rendered");
+  return (
+    <div className="aboutpage">
+      <h2>About Namaste React Series</h2>
+      <UserClass
+        Name={"Bikash Santra"}
+        Location="Kolkata-711409"
+        Contact="+916289951539"
+      />
+      <UserClass
+        Name={"Manu Santra"}
+        Location="Kolkata-711409"
+        Contact="+916289951539"
+      />
+    
+    </div>
+  );
+};
+export default About;
+
+*/
+}

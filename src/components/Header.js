@@ -5,11 +5,15 @@ import { Link } from "react-router";
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
 
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="header">
       <Link to="/">
         <div className="logo-container">
-          <img src={LOGO_URL} className="logo" />
+          <img src={LOGO_URL} className="logo" onClick={handleLogoClick} />
         </div>
       </Link>
 
