@@ -1,6 +1,7 @@
 import { LOGO_URL } from "../utils/constatnt";
 import { useState } from "react";
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
@@ -9,6 +10,7 @@ const Header = () => {
     window.location.reload();
   };
 
+  const onlineStatus = useOnlineStatus();
   return (
     <div className="header">
       <Link to="/">
@@ -19,6 +21,7 @@ const Header = () => {
 
       <div className="navitems">
         <ul>
+          <li>Online Status {onlineStatus ? "✅" : "🔴"}</li>
           <li>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
               Home

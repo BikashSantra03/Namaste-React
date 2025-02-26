@@ -1,41 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import RestaurantCard from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import NotFound from "./NotFound";
-import { swiggyApi } from "../utils/constatnt";
 import { Link } from "react-router";
+import useRestaurantsList from "../utils/useRestaurantsList";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
-  const [listOfRestraunt, setListOfRestraunt] = useState([]);
   const [searchText, setsearchText] = useState("");
 
   const [filteredData, setFilteredData] = useState(null); // Store filtered data
 
-  useEffect(() => {
-    fetchData();
-
-    const timer = setInterval(() => {
-      console.log("Set Interval called");
-    }, 2000);
-
-    return () => {
-      clearInterval(timer);
-      console.log("Previous Page Unmounted");
-    };
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(swiggyApi);
-    const apiData = await data.json();
-    // console.log(apiData);
-
-    const filteredApiData = apiData.data.cards.slice(3);
-
-    console.log(filteredApiData);
-
-    setListOfRestraunt(filteredApiData);
-  };
+  const { listOfRestraunt, setListOfRestraunt } = useRestaurantsList(); // custom Hook for API call
 
   const handleSearch = () => {
     const filtered = listOfRestraunt.filter((res) =>
@@ -47,10 +24,13 @@ const Body = () => {
 
   // When Enterd pressed then automatically call handleSearch
   const handleKeyDown = (e) => {
-    if (event.key === "Enter") {
+    if (e.key === "Enter") {
       handleSearch();
     }
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) return <h1>You are Offline</h1>;
 
   return listOfRestraunt.length === 0 ? (
     <Shimmer />
@@ -117,5 +97,3 @@ const Body = () => {
   );
 };
 export default Body;
-
-//
