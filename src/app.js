@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
@@ -11,6 +11,19 @@ import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import RestaurantMenu from "./components/RestaurantMenu";
 import CartPage from "./components/CartPage";
+import Shimmer from "./components/Shimmer";
+//import Grocery from "./components/Grocery";
+
+{
+  /* - Modular Bundling
+     - Code Splitting
+     - Lazy Loading
+*/
+}
+
+// Lazy Loading ==> On Demand Loading
+
+const Grocery = lazy(() => import("./components/Grocery")); // Page is loaded after going to that page.
 
 const AppLayout = () => {
   return (
@@ -31,6 +44,14 @@ root.render(
         <Route index element={<Body />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route
+          path="grocery"
+          element={
+            <Suspense fallback={<Shimmer />}>
+              <Grocery />{" "}
+            </Suspense>
+          }
+        />
         <Route path="cart" element={<CartPage />} />
         <Route path="restaurants/:resid" element={<RestaurantMenu />} />
         <Route path="*" element={<ErrorPage />} />

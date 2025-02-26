@@ -44,6 +44,15 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="/grocery"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Grocery
+            </Link>
+          </li>
           <li>
             <Link
               to="/cart"
