@@ -24,7 +24,7 @@ const useRestaurantsList = () => {
 
     const filteredApiData = apiData.data.cards.slice(3);
 
-    console.log(filteredApiData);
+    console.log("Restaurants List: ", filteredApiData);
 
     setListOfRestraunt(filteredApiData);
   };

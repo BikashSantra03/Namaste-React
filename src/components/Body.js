@@ -16,9 +16,12 @@ const Body = () => {
 
   const handleSearch = () => {
     const filtered = listOfRestraunt.filter((res) =>
-      res.card.card.info.name.toLowerCase().includes(searchText.toLowerCase())
+      res?.card?.card?.info?.name
+        .toLowerCase()
+        .includes(searchText.toLowerCase())
     );
-    console.log(filtered);
+    console.log("Searched Filtered Data : ", filtered);
+
     setFilteredData(filtered); // Update filteredData state
   };
 
@@ -75,8 +78,8 @@ const Body = () => {
         {filteredData === null ? (
           listOfRestraunt.map((res) => (
             <Link
-              key={res?.card.card.info.id}
-              to={"/restaurants/" + res?.card.card.info.id}
+              key={res?.card?.card?.info?.id}
+              to={"/restaurants/" + res?.card?.card?.info?.id}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <RestaurantCard resData={res} />
@@ -88,11 +91,10 @@ const Body = () => {
           filteredData.map((res) => (
             <Link
               key={res?.card.card.info.id}
-              to={"/restaurants/" + res?.card.card.info.id}
+              to={"/restaurants/" + res?.card?.card?.info?.id}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              {" "}
-              <RestaurantCard key={res?.card.card.info.id} resData={res} />{" "}
+              <RestaurantCard resData={res} />
             </Link>
           ))
         )}
