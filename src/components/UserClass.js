@@ -20,7 +20,7 @@ class UserClass extends React.Component {
       userInfo: jsonData,
     });
 
-    console.log("Child component Did Mount")
+    console.log("Child component Did Mount");
   }
   componentDidUpdate() {
     console.log("Child Component did updated");

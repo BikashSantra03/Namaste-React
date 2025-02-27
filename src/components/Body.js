@@ -36,12 +36,12 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
+      <div className=" flex flex-wrap justify-center my-10 gap-1">
         <div className="search">
           <input
             name="search"
             type="text"
-            className="search-box"
+            className="min-w-2xs p-2.5 border border-solid border-black"
             placeholder="Search Food or Restaurant"
             value={searchText}
             onChange={(e) => {
@@ -49,12 +49,16 @@ const Body = () => {
             }}
             onKeyDown={handleKeyDown}
           />
-          <button className="search-btn" onClick={handleSearch}>
+          <button
+            className="m-2 px-3.5 py-2.5 cursor-pointer  bg-green-300 rounded-lg"
+            onClick={handleSearch}
+          >
             Search
           </button>
         </div>
 
         <button
+          className="m-2 px-3.5 py-2.5 cursor-pointer  bg-gray-300 rounded-lg"
           onClick={() => {
             setListOfRestraunt(
               listOfRestraunt.filter(
@@ -67,7 +71,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="cards-container">
+      <div className="flex flex-wrap justify-around gap-2.5 mx-10">
         {filteredData === null ? (
           listOfRestraunt.map((res) => (
             <Link

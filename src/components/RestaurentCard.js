@@ -9,10 +9,16 @@ const RestaurantCard = (props) => {
   const deliveryTime = resData?.card?.card?.info?.sla?.deliveryTime;
 
   return (
-    <div className="res-card">
-      <img src={Card_IMG_URL + cloudinaryImageId} alt="pizza" />
-      <div className="itemdetails">
-        <h3>{name.toUpperCase()}</h3>
+    <div className="flex w-[200px]  p-1.5 border border-transparent rounded-lg flex-col bg-[antiquewhite;]  hover:scale-[1.1] duration-300 ease-in  ">
+      <img
+        className=" w-[200px] h-[200px] object-cover rounded-lg"
+        src={Card_IMG_URL + cloudinaryImageId}
+        alt="pizza"
+      />
+      <div className="flex flex-col gap-2">
+        <h3 className="font-bold py-4 text-lg text-[#4caf50]">
+          {name.toUpperCase()}
+        </h3>
         <h4>{cuisines.join(", ")}</h4>
         <h4>{avgRating}⭐</h4>
         <h4>{costForTwo}</h4>

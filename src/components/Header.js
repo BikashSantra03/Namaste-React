@@ -1,26 +1,27 @@
 import { LOGO_URL } from "../utils/constatnt";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
 
   const handleLogoClick = () => {
+    <Navigate to="/" />;
     window.location.reload();
   };
 
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="header">
-      <Link to="/">
-        <div className="logo-container">
+    <div className="flex  justify-between items-center m-4">
+      <div className=" w-32 h-32 ">
+        <Link to="/">
           <img src={LOGO_URL} className="logo" onClick={handleLogoClick} />
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className="navitems">
-        <ul>
+        <ul className="flex flex-wrap font-bold gap-8 justify-center items-center">
           <li>Online Status {onlineStatus ? "✅" : "🔴"}</li>
           <li>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -63,7 +64,7 @@ const Header = () => {
           </li>
 
           <button
-            className="login-btn"
+            className="bg-[orange] rounded-lg py-2 px-4 cursor-pointer hover:bg-[#f6bb4d] hover:scale-110 duration-250 ease-in"
             onClick={() => {
               btnText == "Login" ? setBtnText("LogOut") : setBtnText("Login");
             }}

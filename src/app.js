@@ -27,7 +27,7 @@ const Grocery = lazy(() => import("./components/Grocery")); // Page is loaded af
 
 const AppLayout = () => {
   return (
-    <div className="app">
+    <div className="text-center">
       <Header />
       <Outlet />
       <Footer />

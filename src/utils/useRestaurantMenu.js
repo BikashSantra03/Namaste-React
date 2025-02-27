@@ -19,7 +19,7 @@ const useRestaurantMenu = (resid) => {
     const itemsData =
       filteredresInfoData?.itemCards || filteredresInfoData?.carousel;
 
-    console.log("Restaurants Items :  " + itemsData);
+    console.log(itemsData);
 
     setResinfo(itemsData);
   };
