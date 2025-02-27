@@ -20,7 +20,7 @@ class About extends Component {
     console.log("Parent component rendered");
 
     return (
-      <div className="aboutpage">
+      <div className="text-center">
         <h2>About Namaste React Series</h2>
         <UserClass
           name={"Bikash Santra"}

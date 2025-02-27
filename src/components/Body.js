@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import { Link } from "react-router";
 import useRestaurantsList from "../utils/useRestaurantsList";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { PromotedRestaurantCard } from "./PromotedRestaurantCard";
 
 const Body = () => {
   const [searchText, setsearchText] = useState("");
@@ -13,6 +14,8 @@ const Body = () => {
   const [filteredData, setFilteredData] = useState(null); // Store filtered data
 
   const { listOfRestraunt, setListOfRestraunt } = useRestaurantsList(); // custom Hook for API call
+
+  const PromotedRestaurant = PromotedRestaurantCard(RestaurantCard);
 
   const handleSearch = () => {
     const filtered = listOfRestraunt.filter((res) =>
@@ -74,7 +77,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-around gap-2.5 mx-10">
+      <div className="flex flex-wrap justify-around gap-2.5 mx-10 relative z-1">
         {filteredData === null ? (
           listOfRestraunt.map((res) => (
             <Link
@@ -82,7 +85,11 @@ const Body = () => {
               to={"/restaurants/" + res?.card?.card?.info?.id}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <RestaurantCard resData={res} />
+              {res?.card?.card?.info?.promoted ? (
+                <PromotedRestaurant resData={res} />
+              ) : (
+                <RestaurantCard resData={res} />
+              )}
             </Link>
           ))
         ) : filteredData.length === 0 ? (
@@ -94,7 +101,11 @@ const Body = () => {
               to={"/restaurants/" + res?.card?.card?.info?.id}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <RestaurantCard resData={res} />
+              {res?.card?.card?.info?.promoted ? (
+                <PromotedRestaurant resData={res} />
+              ) : (
+                <RestaurantCard resData={res} />
+              )}
             </Link>
           ))
         )}

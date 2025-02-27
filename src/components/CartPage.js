@@ -2,7 +2,7 @@ import React from "react";
 
 const CartPage = () => {
   return (
-    <div>
+    <div className="text-center">
       <h1>CartPage</h1>
     </div>
   );

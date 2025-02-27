@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
   const deliveryTime = resData?.card?.card?.info?.sla?.deliveryTime;
 
   return (
-    <div className="flex w-[200px]  p-1.5 border border-transparent rounded-lg flex-col bg-[antiquewhite;]  hover:scale-[1.1] duration-300 ease-in  ">
+    <div className="flex w-[200px]  p-1.5 border border-transparent rounded-lg flex-col bg-[antiquewhite;]  hover:scale-[0.9] duration-300 ease-in  ">
       <img
         className=" w-[200px] h-[200px] object-cover rounded-lg"
         src={Card_IMG_URL + cloudinaryImageId}
