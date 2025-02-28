@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import RestaurantCard from "./RestaurentCard";
+import RestaurantCard from "./cards/RestaurantCard";
 import Shimmer from "./Shimmer";
-import NotFound from "./NotFound";
+import NotFound from "./pages/NotFound";
 import { Link } from "react-router";
 import useRestaurantsList from "../utils/useRestaurantsList";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { PromotedRestaurantCard } from "./PromotedRestaurantCard";
+import { PromotedRestaurantCard } from "./cards/PromotedRestaurantCard";
 
 const Body = () => {
   const [searchText, setsearchText] = useState("");

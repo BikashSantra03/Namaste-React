@@ -6,11 +6,11 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import ErrorPage from "./components/ErrorPage";
-import RestaurantMenu from "./components/RestaurantMenu";
-import CartPage from "./components/CartPage";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import ErrorPage from "./components/pages/ErrorPage";
+import CartPage from "./components/pages/CartPage";
+import RestaurantMenu from "./components/cards/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 //import Grocery from "./components/Grocery";
 
@@ -23,7 +23,7 @@ import Shimmer from "./components/Shimmer";
 
 // Lazy Loading ==> On Demand Loading
 
-const Grocery = lazy(() => import("./components/Grocery")); // Page is loaded after going to that page.
+const Grocery = lazy(() => import("./components/pages/Grocery")); // Page is loaded after going to that page.
 
 const AppLayout = () => {
   return (

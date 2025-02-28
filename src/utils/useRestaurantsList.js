@@ -6,15 +6,6 @@ const useRestaurantsList = () => {
 
   useEffect(() => {
     fetchData();
-
-    const timer = setInterval(() => {
-      console.log("Set Interval called");
-    }, 2000);
-
-    return () => {
-      clearInterval(timer);
-      console.log("Previous Page Unmounted");
-    };
   }, []);
 
   const fetchData = async () => {

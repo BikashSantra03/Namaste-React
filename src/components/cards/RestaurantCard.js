@@ -1,4 +1,4 @@
-import { Card_IMG_URL } from "../utils/constatnt";
+import { Card_IMG_URL } from "../../utils/constatnt";
 
 const RestaurantCard = (props) => {
   const { resData } = props;

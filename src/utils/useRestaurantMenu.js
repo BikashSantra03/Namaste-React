@@ -9,19 +9,20 @@ const useRestaurantMenu = (resid) => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=${resid}&catalog_qa=undefined&query=Pizza&submitAction=ENTER`
+      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId=${resid}&catalog_qa=undefined&query=Pizza&submitAction=ENTER`
     );
+
     const jsonData = await data.json();
 
-    const filteredresInfoData =
-      jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-        ?.card?.card;
-    const itemsData =
-      filteredresInfoData?.itemCards || filteredresInfoData?.carousel;
+    const resItems = jsonData?.data?.cards;
+    // jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
 
-    console.log("Restaurants items : ", itemsData);
+    // const itemsData =
+    //   filteredresInfoData?.itemCards || filteredresInfoData?.carousel;
 
-    setResinfo(itemsData);
+    console.log("Restaurants items all categories : ", resItems);
+
+    setResinfo(resItems);
   };
 
   return resInfo;

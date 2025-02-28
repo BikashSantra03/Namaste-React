@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { items_IMG } from "../utils/constatnt";
+import { items_IMG } from "../../utils/constatnt";
 
 const RestaurantMenuItems = (props) => {
   const { itemdata } = props;
 
   const { name, description, imageId } =
-    itemdata?.card?.info || itemdata?.dish.info;
+    itemdata?.card?.info || itemdata?.dish?.info;
 
   const defaultPrice =
     itemdata?.card?.info?.defaultPrice ||
@@ -30,6 +30,7 @@ const RestaurantMenuItems = (props) => {
         <h3 className="font-bold py-4 text-lg">{name}</h3>
         <h4>
           {!isExpanded ? shortDescription : description}
+          // for more/less span
           {description?.length > 50 && (
             <span onClick={() => setIsExpanded(!isExpanded)}>
               {isExpanded ? "less" : "more"}
