@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
@@ -12,6 +12,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 import CartPage from "./components/pages/CartPage";
 import RestaurantMenu from "./components/cards/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 //import Grocery from "./components/Grocery";
 
 {
@@ -26,12 +27,29 @@ import Shimmer from "./components/Shimmer";
 const Grocery = lazy(() => import("./components/pages/Grocery")); // Page is loaded after going to that page.
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState(null);
+
+  useEffect(() => {
+    // Make a API call and receive user name and password
+    const data = {
+      name: "Bikash Santra",
+    };
+
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div className="">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    // Context value for whole app
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      <div className="">
+        {/*overriding context value for header*/}
+        <UserContext.Provider value={{ loggedInUser: "Manu Santra" }}>
+          <Header />
+        </UserContext.Provider>
+        <Outlet />
+        <Footer />
+      </div>
+    </UserContext.Provider>
   );
 };
 
