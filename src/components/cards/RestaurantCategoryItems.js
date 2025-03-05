@@ -9,9 +9,12 @@ const RestaurantCategoryItems = ({ data, showItems, setShowIndex }) => {
   };
 
   return (
-    <div className=" my-4 bg-gray-50 shadow-lg p-4 " onClick={handleClick}>
+    <div className=" my-4 bg-gray-50 shadow-lg p-4 ">
       {/*Accordion Header --------------------------------------------------------------------------*/}
-      <div className="flex flex-wrap justify-between cursor-pointer">
+      <div
+        className="flex flex-wrap justify-between cursor-pointer "
+        onClick={handleClick}
+      >
         <span className="font-bold text-lg ">
           {data.title} ({data.itemCards.length})
         </span>
