@@ -38,15 +38,19 @@ const AppLayout = () => {
     setUserName(data.name);
   }, []);
 
+  const userValue = {
+    userName,
+    setUserName,
+  };
+
   return (
     // Context value for whole app
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+    <UserContext.Provider value={userValue}>
       <div className="">
-        {/*overriding context value for header*/}
-        <UserContext.Provider value={{ loggedInUser: "Manu Santra" }}>
-          <Header />
-        </UserContext.Provider>
+        <Header />
+
         <Outlet />
+
         <Footer />
       </div>
     </UserContext.Provider>

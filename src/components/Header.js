@@ -14,7 +14,7 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  const { loggedInUser } = useContext(UserContext);
+  const { userName } = useContext(UserContext);
   //console.log(loggedInUser)
 
   return (
@@ -77,7 +77,7 @@ const Header = () => {
             {btnText}
           </button>
 
-          <li>{loggedInUser}</li>
+          <li>{userName}</li>
         </ul>
       </div>
     </div>

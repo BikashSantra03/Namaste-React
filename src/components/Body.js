@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import RestaurantCard from "./cards/RestaurantCard";
 import Shimmer from "./Shimmer";
@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import useRestaurantsList from "../utils/useRestaurantsList";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { PromotedRestaurantCard } from "./cards/PromotedRestaurantCard";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [searchText, setsearchText] = useState("");
@@ -38,11 +39,13 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <h1>You are Offline</h1>;
 
+  const { userName, setUserName } = useContext(UserContext);
+
   return listOfRestraunt.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className=" flex flex-wrap justify-center my-10 gap-1">
+      <div className=" flex flex-wrap justify-center items-center my-10 gap-1">
         <div className="search">
           <input
             name="search"
@@ -75,6 +78,18 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+
+        <label htmlFor="userNameInput"> User Name: </label>
+        <input
+          type="text"
+          name="userNameInput"
+          className="min-w-1 p-2.5 border border-solid"
+          placeholder="Enter UserName here"
+          value={userName}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
       </div>
 
       <div className="flex flex-wrap justify-around gap-2.5 mx-10 relative z-1">

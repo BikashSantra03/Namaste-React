@@ -23,7 +23,7 @@ class About extends Component {
     return (
       <div className="text-center">
         <UserContext.Consumer>
-          {(data) => <h1 className="font-bold"> User: {data.loggedInUser} </h1>}
+          {(data) => <h1 className="font-bold"> User: {data.userName} </h1>}
         </UserContext.Consumer>
         <UserClass
           name={"Bikash Santra"}
