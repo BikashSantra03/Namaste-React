@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 
 import Shimmer from "../Shimmer";
@@ -27,6 +27,8 @@ const RestaurantMenu = () => {
     );
   console.log(resCategories);
 
+  const [showIndex, setShowIndex] = useState(null);
+
   return resInfo.length === 0 ? (
     <Shimmer />
   ) : (
@@ -52,10 +54,12 @@ const RestaurantMenu = () => {
         </div>
       </div>
 
-      {resCategories.map((category) => (
+      {resCategories.map((category, index) => (
         <RestaurantCategoryItems
           key={category?.card?.card?.title}
           data={category?.card?.card}
+          showItems={index === showIndex ? true : false}
+          setShowIndex={() => setShowIndex(index)}
         />
       ))}
     </div>

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import ItemListsCards from "./ItemListsCards";
 
-const RestaurantCategoryItems = ({ data }) => {
+const RestaurantCategoryItems = ({ data, showItems, setShowIndex }) => {
   const resItems = data?.itemCards || data?.carousel;
 
-  const [showItems, setShowItems] = useState(false);
+  const handleClick = () => {
+    setShowIndex();
+  };
+
   return (
-    <div className=" my-4 bg-gray-50 shadow-lg p-4 ">
+    <div className=" my-4 bg-gray-50 shadow-lg p-4 " onClick={handleClick}>
       {/*Accordion Header --------------------------------------------------------------------------*/}
-      <div
-        onClick={() => setShowItems(!showItems)}
-        className="flex flex-wrap justify-between cursor-pointer"
-      >
+      <div className="flex flex-wrap justify-between cursor-pointer">
         <span className="font-bold text-lg ">
           {data.title} ({data.itemCards.length})
         </span>
