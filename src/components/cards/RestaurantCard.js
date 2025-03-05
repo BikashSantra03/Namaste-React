@@ -1,4 +1,6 @@
 import { Card_IMG_URL } from "../../utils/constatnt";
+import { FcRating } from "react-icons/fc";
+
 
 const RestaurantCard = (props) => {
   const { resData } = props;
@@ -20,7 +22,10 @@ const RestaurantCard = (props) => {
           {name.toUpperCase()}
         </h3>
         <h4>{cuisines.join(", ")}</h4>
-        <h4>{avgRating}⭐</h4>
+        <h4 className="flex items-center">
+          {avgRating}
+          <FcRating />
+        </h4>
         <h4>{costForTwo}</h4>
         <h4>
           {deliveryTime}-{deliveryTime + 5} minutes

@@ -1,6 +1,6 @@
 import React from "react";
 import { items_IMG } from "../../utils/constatnt";
-
+import { FcRating } from "react-icons/fc";
 const ItemListsCards = ({ resItem }) => {
   const { name, description, imageId, ratings } =
     resItem?.card?.info || resItem?.dish?.info;
@@ -15,10 +15,11 @@ const ItemListsCards = ({ resItem }) => {
       <div className="w-9/12 flex flex-col">
         <h2 className="font-semibold text-lg">{name}</h2>
         <p>₹{price / 100}</p>
-        <p>
+        <p className="flex items-center gap-1">
           {ratings?.aggregatedRating?.rating ? (
             <>
-              ⭐{ratings.aggregatedRating.rating}
+              <FcRating /> 
+              {ratings.aggregatedRating.rating}
               {ratings?.aggregatedRating?.ratingCount &&
                 ` (${ratings.aggregatedRating.ratingCount})`}
             </>

@@ -7,7 +7,7 @@ const RestaurantCategoryItems = ({ data }) => {
   const [showItems, setShowItems] = useState(false);
   return (
     <div className=" my-4 bg-gray-50 shadow-lg p-4 ">
-      {/*Accordion Header */}
+      {/*Accordion Header --------------------------------------------------------------------------*/}
       <div
         onClick={() => setShowItems(!showItems)}
         className="flex flex-wrap justify-between cursor-pointer"
@@ -18,7 +18,7 @@ const RestaurantCategoryItems = ({ data }) => {
         <span>🔽</span>
       </div>
 
-      {/*Accordion Body */}
+      {/*Accordion Body --------------------------------------------------------------------------- */}
 
       {resItems.map(
         (item) =>
