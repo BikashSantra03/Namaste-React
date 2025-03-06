@@ -26,7 +26,11 @@ const RestaurantCategoryItems = ({ data, showItems, setShowIndex }) => {
       {resItems.map(
         (item) =>
           showItems && (
-            <ItemListsCards key={item?.card?.info?.id} resItem={item} />
+            <ItemListsCards
+              key={item?.card?.info?.id}
+              resItem={item}
+              showAddbtn={true}
+            />
           )
       )}
     </div>

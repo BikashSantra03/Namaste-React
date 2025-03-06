@@ -1,7 +1,13 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
+import { Toaster } from "react-hot-toast"
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
+
+import { Provider } from "react-redux";
+import appStore from "./utils/store/appStore";
+
+import UserContext from "./utils/UserContext";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -12,7 +18,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 import CartPage from "./components/pages/CartPage";
 import RestaurantMenu from "./components/cards/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
-import UserContext from "./utils/UserContext";
+
 //import Grocery from "./components/Grocery";
 
 {
@@ -44,16 +50,20 @@ const AppLayout = () => {
   };
 
   return (
-    // Context value for whole app
-    <UserContext.Provider value={userValue}>
-      <div className="">
-        <Header />
+    <Provider store={appStore}>
+      {/* Context value for whole app */}
+      <UserContext.Provider value={userValue}>
+        <div>
+          <Header />
 
-        <Outlet />
+          <Outlet />
 
-        <Footer />
-      </div>
-    </UserContext.Provider>
+          <Footer />
+
+          <Toaster />
+        </div>
+      </UserContext.Provider>{" "}
+    </Provider>
   );
 };
 

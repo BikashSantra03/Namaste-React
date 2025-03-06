@@ -1,8 +1,14 @@
 import { LOGO_URL } from "../utils/constatnt";
 import { useContext, useState } from "react";
 import { Link, Navigate } from "react-router";
-import useOnlineStatus from "../utils/useOnlineStatus";
+
+import { FaCartShopping } from "react-icons/fa6";
+
 import UserContext from "../utils/UserContext";
+
+import { useSelector } from "react-redux";
+
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
@@ -15,7 +21,9 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const { userName } = useContext(UserContext);
-  //console.log(loggedInUser)
+
+  // subscribing to the store using Selector
+  const cartItems = useSelector((store) => store.cart.items); //used to read from store
 
   return (
     <div className="flex  justify-between items-center m-4">
@@ -63,8 +71,19 @@ const Header = () => {
             <Link
               to="/cart"
               style={{ textDecoration: "none", color: "inherit" }}
+              className="flex relative"
             >
-              Cart
+              <div className="relative">
+                <FaCartShopping className="text-2xl" />
+                {cartItems.length > 0 && (
+                  <span
+                    className="absolute -top-1 -right-2 bg-green-600 text-xs w-5 h-5 flex 
+                    justify-center items-center animate-bounce rounded-full text-white"
+                  >
+                    {cartItems.length}
+                  </span>
+                )}
+              </div>
             </Link>
           </li>
 
@@ -76,8 +95,7 @@ const Header = () => {
           >
             {btnText}
           </button>
-
-          <li>{userName}</li>
+          {btnText === "LogOut" && <li>{userName}</li>}
         </ul>
       </div>
     </div>
