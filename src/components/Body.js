@@ -49,6 +49,7 @@ const Body = () => {
         <div className="search">
           <input
             name="search"
+            data-testid="searchInput"
             type="text"
             className="min-w-2xs p-2.5 border border-solid border-black"
             placeholder="Search Food or Restaurant"
@@ -76,7 +77,7 @@ const Body = () => {
             );
           }}
         >
-          Top Rated Restaurant
+          Top Rated Restaurants
         </button>
 
         <label htmlFor="userNameInput"> User Name: </label>

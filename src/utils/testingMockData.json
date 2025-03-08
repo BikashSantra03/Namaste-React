@@ -1,0 +1,87 @@
+{
+  "card": {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+      "info": {
+        "id": "893868",
+        "name": "La Pino'z Pizza",
+        "cloudinaryImageId": "j23ok15p0ge6cfwqpg8m",
+        "locality": "SEALDAH",
+        "areaName": "SEALDAH RAILWAY STATION",
+        "costForTwo": "₹250 for two",
+        "cuisines": ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
+        "avgRating": 4.1,
+        "parentId": "4961",
+        "avgRatingString": "4.1",
+        "totalRatingsString": "151",
+        "promoted": true,
+        "adTrackingId": "cid=25924245~p=1~adgrpid=25924245#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=893868~eid=c9c177f6-9018-4701-81c1-5a67357093f2~srvts=1741358785900~collid=83631",
+        "sla": {
+          "deliveryTime": 25,
+          "lastMileTravel": 0.6,
+          "serviceability": "SERVICEABLE",
+          "slaString": "20-25 mins",
+          "lastMileTravelString": "0.6 km",
+          "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+          "nextCloseTime": "2025-03-07 23:00:00",
+          "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+          "entityBadges": {
+            "textBased": {},
+            "imageBased": {},
+            "textExtendedBadges": {}
+          }
+        },
+        "aggregatedDiscountInfoV3": {
+          "header": "40% OFF",
+          "subHeader": "UPTO ₹80",
+          "logoCtx": {
+            "text": "BENEFITS"
+          }
+        },
+        "orderabilityCommunication": {
+          "title": {},
+          "subTitle": {},
+          "message": {},
+          "customIcon": {},
+          "commsStyling": {}
+        },
+        "differentiatedUi": {
+          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+          "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+          }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+          "aggregatedRating": {
+            "rating": "--"
+          }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        "campaignId": "25924245"
+      },
+      "analytics": {},
+      "cta": {
+        "link": "swiggy://menu?restaurant_id=893868&source=collection&query=Pizza",
+        "text": "RESTAURANT_MENU",
+        "type": "DEEPLINK"
+      },
+      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    },
+    "relevance": {
+      "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+      "sectionId": "MENU_RETURN_FOOD"
+    }
+  }
+}

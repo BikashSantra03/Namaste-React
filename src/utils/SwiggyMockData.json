@@ -1,0 +1,824 @@
+{
+  "statusCode": 0,
+  "data": {
+    "statusMessage": "done successfully",
+    "pageOffset": {
+      "nextOffset": "CJhqEK9SKIDo9eDz3fLmEjDFDjgB",
+      "widgetOffset": {
+        "restaurantCountWidget": "",
+        "collectionV5RestaurantListWidget_SimRestoRelevance_food": "8",
+        "inlineFacetFilter": "",
+        "collectionV5MastheadWidget": ""
+      }
+    },
+    "cards": [
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.CollectionMasthead",
+            "collectionId": "83631",
+            "title": "Pizza",
+            "description": "Cheesilicious pizzas to make every day extraordinary.",
+            "imageId": "COLLECTIONS/IMAGES/MERCH/2024/8/20/60f66049-cfcc-4f0b-891f-624938aac2bc_Pizza (6).png",
+            "aspectRatio": "3.44",
+            "cta": {
+              "link": "swiggy://collectionV2?collection_id=83631&tags=layout_CCS_Pizza,pizza,ads_pc_pizza",
+              "type": "collectionv2"
+            },
+            "type": "COLLECTION_MASTHEAD_TYPE_IMAGE_WITH_TEXT",
+            "count": "71 restaurants"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.InlineViewFilterSortWidget",
+            "sortConfigs": [
+              {
+                "key": "relevance",
+                "title": "Relevance (Default)",
+                "selected": true,
+                "defaultSelection": true
+              },
+              {
+                "key": "deliveryTimeAsc",
+                "title": "Delivery Time"
+              },
+              {
+                "key": "modelBasedRatingDesc",
+                "title": "Rating"
+              },
+              {
+                "key": "costForTwoAsc",
+                "title": "Cost: Low to High"
+              },
+              {
+                "key": "costForTwoDesc",
+                "title": "Cost: High to Low"
+              }
+            ],
+            "restaurantCount": 71,
+            "facetList": [
+              {
+                "label": "Veg/Non-Veg",
+                "id": "isVeg",
+                "selection": "SELECT_TYPE_MULTISELECT",
+                "facetInfo": [
+                  {
+                    "label": "Non Veg",
+                    "id": "isVegfacetquery0",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Pure Veg",
+                    "id": "isVegfacetquery1",
+                    "analytics": {},
+                    "openFilter": true
+                  }
+                ],
+                "viewType": "VIEW_TYPE_HALF_CARD",
+                "subLabel": "Filterby",
+                "openFilter": true
+              },
+              {
+                "label": "Ratings",
+                "id": "rating",
+                "selection": "SELECT_TYPE_MULTISELECT",
+                "facetInfo": [
+                  {
+                    "label": "Ratings",
+                    "id": "ratingfacetquery0",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Ratings 4.0+",
+                    "id": "ratingfacetquery1",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Ratings 4.5+",
+                    "id": "ratingfacetquery2",
+                    "analytics": {},
+                    "openFilter": true
+                  }
+                ],
+                "viewType": "VIEW_TYPE_HALF_CARD",
+                "subLabel": "Filterby",
+                "openFilter": true
+              },
+              {
+                "label": "Delivery Time",
+                "id": "deliveryTime",
+                "selection": "SELECT_TYPE_MULTISELECT",
+                "facetInfo": [
+                  {
+                    "label": "Less than 30 mins",
+                    "id": "deliveryTimefacetquery0",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Less than 45 mins",
+                    "id": "deliveryTimefacetquery1",
+                    "analytics": {},
+                    "openFilter": true
+                  }
+                ],
+                "viewType": "VIEW_TYPE_HALF_CARD",
+                "subLabel": "Filterby",
+                "openFilter": true
+              },
+              {
+                "label": "Cost For Two",
+                "id": "costForTwo",
+                "selection": "SELECT_TYPE_MULTISELECT",
+                "facetInfo": [
+                  {
+                    "label": "Less than Rs. 300",
+                    "id": "costForTwofacetquery0",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Rs.300 - Rs.600",
+                    "id": "costForTwofacetquery1",
+                    "analytics": {},
+                    "openFilter": true
+                  },
+                  {
+                    "label": "Greater than Rs. 600",
+                    "id": "costForTwofacetquery2",
+                    "analytics": {},
+                    "openFilter": true
+                  }
+                ],
+                "viewType": "VIEW_TYPE_HALF_CARD",
+                "subLabel": "Filterby",
+                "openFilter": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+            "layout": {
+              "rows": 1,
+              "widgetPadding": {
+                "left": 16,
+                "right": 16
+              },
+              "scrollBar": {},
+              "widgetTheme": {
+                "defaultMode": {
+                  "backgroundColour": "#FFFFFF",
+                  "theme": "THEME_TYPE_LIGHT"
+                },
+                "darkMode": {
+                  "backgroundColour": "#1B3028",
+                  "theme": "THEME_TYPE_DARK"
+                }
+              }
+            },
+            "id": "restaurantCountWidget",
+            "gridElements": {
+              "infoWithStyle": {
+                "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+                "text": "Restaurants to explore",
+                "headerStyling": {
+                  "textSize": 15,
+                  "textColor": "text_color_highest_emphasis",
+                  "textFontName": "FONT_NAME_HEADER_H5",
+                  "maxLines": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "339595",
+              "name": "Oye Pizza",
+              "cloudinaryImageId": "c53ff739eb3afe1c020fa28dead67791",
+              "locality": "kestopur",
+              "areaName": "Lake Town",
+              "costForTwo": "₹200 for two",
+              "cuisines": [
+                "Burger",
+                "pizza",
+                "sandwich",
+                "Fast Food",
+                "Beverages",
+                "Italian",
+                "Pasta"
+              ],
+              "avgRating": 3.8,
+              "parentId": "4609",
+              "avgRatingString": "3.8",
+              "totalRatingsString": "97",
+              "promoted": true,
+              "adTrackingId": "cid=25919982~p=0~adgrpid=25919982#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=339595~eid=95a9233d-4c77-4a22-a265-19bf689d6b25~srvts=1741399272568~collid=83631",
+              "sla": {
+                "deliveryTime": 53,
+                "lastMileTravel": 9.1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "50-55 mins",
+                "lastMileTravelString": "9.1 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-08 23:59:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "imageBased": {},
+                  "textExtendedBadges": {},
+                  "textBased": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "ABOVE ₹700",
+                "discountTag": "FLAT DEAL",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+              "campaignId": "25919982"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=339595&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "871948",
+              "name": "Bake Me Good",
+              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/20/64471060-0a56-440a-8d34-259b26977949_b7fb76d2-d14f-4677-9530-6d291d850f10.jpg",
+              "locality": "Old Ballygunge Rd",
+              "areaName": "South Kolkata",
+              "costForTwo": "₹200 for two",
+              "cuisines": ["Bakery", "Indian"],
+              "avgRating": 4.7,
+              "parentId": "39945",
+              "avgRatingString": "4.7",
+              "totalRatingsString": "399",
+              "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "25-30 mins",
+                "lastMileTravelString": "5.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-08 20:30:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "aggregatedDiscountInfoV2": {},
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "textExtendedBadges": {},
+                  "textBased": {},
+                  "imageBased": {}
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=871948&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "485582",
+              "name": "Pizza Mahal",
+              "cloudinaryImageId": "a78906f5f7c87b7afd52c57db05a3568",
+              "locality": "Kamarpara",
+              "areaName": "Jadavpur",
+              "costForTwo": "₹350 for two",
+              "cuisines": ["Italian", "Pizzas", "Pastas", "Snacks"],
+              "avgRating": 4.1,
+              "parentId": "158729",
+              "avgRatingString": "4.1",
+              "totalRatingsString": "1.5K+",
+              "promoted": true,
+              "adTrackingId": "cid=25837439~p=2~adgrpid=25837439#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=485582~eid=34cbf9ee-5f78-4941-84dc-6ffa0240cf2e~srvts=1741399272568~collid=83631",
+              "sla": {
+                "deliveryTime": 65,
+                "lastMileTravel": 10,
+                "serviceability": "SERVICEABLE",
+                "slaString": "65-70 mins",
+                "lastMileTravelString": "10.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-15 00:00:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "imageBased": {},
+                  "textExtendedBadges": {},
+                  "textBased": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "30% OFF",
+                "subHeader": "UPTO ₹150",
+                "discountTag": "SAVE BIG",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+              "campaignId": "25837439"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=485582&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "361556",
+              "name": "Safe House",
+              "cloudinaryImageId": "b661eb45d01d49b1dbc839dbefa0fb61",
+              "locality": "Salt Lake",
+              "areaName": "Bidhannagar",
+              "costForTwo": "₹200 for two",
+              "cuisines": ["pizza", "Fast Food", "Italian", "Snacks"],
+              "avgRating": 3.8,
+              "parentId": "174328",
+              "avgRatingString": "3.8",
+              "totalRatingsString": "407",
+              "sla": {
+                "deliveryTime": 38,
+                "lastMileTravel": 5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "5.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-08 07:59:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "textBased": {},
+                  "imageBased": {},
+                  "textExtendedBadges": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "40% OFF",
+                "subHeader": "UPTO ₹80",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=361556&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "654523",
+              "name": "French Loaf Bakery & Cafe",
+              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/10/3/fc91861b-cba8-418e-b992-e4f9d7dba09b_3b816c99-6971-4fb5-88b9-576ac82a550a.jpg",
+              "locality": "Ustad Bare Golamali Khan Sarani",
+              "areaName": "South Kolkata",
+              "costForTwo": "₹400 for two",
+              "cuisines": [
+                "Desserts",
+                "Cakes and Pastries",
+                "Bakery",
+                "Snacks",
+                "Pizzas",
+                "Beverages"
+              ],
+              "avgRating": 4.6,
+              "parentId": "586578",
+              "avgRatingString": "4.6",
+              "totalRatingsString": "954",
+              "promoted": true,
+              "adTrackingId": "cid=25954696~p=3~adgrpid=25954696#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=654523~eid=47c1031f-2539-4f2e-bb06-171b539d41e9~srvts=1741399272568~collid=83631",
+              "sla": {
+                "deliveryTime": 26,
+                "lastMileTravel": 5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "25-30 mins",
+                "lastMileTravelString": "5.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-08 22:00:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "textExtendedBadges": {},
+                  "textBased": {},
+                  "imageBased": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹69",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+              "campaignId": "25954696"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=654523&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "867064",
+              "name": "THE PIZZA WALA",
+              "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/6/0880be20-1c9d-4bc3-9cf8-848c7fa9dce8_867064.jpg",
+              "locality": "Allenby Rd",
+              "areaName": "South Kolkata",
+              "costForTwo": "₹299 for two",
+              "cuisines": ["Beverages", "Pizzas", "Cafe"],
+              "avgRating": 3.6,
+              "parentId": "212667",
+              "avgRatingString": "3.6",
+              "totalRatingsString": "19",
+              "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 4.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "4.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-09 00:45:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "textBased": {},
+                  "imageBased": {},
+                  "textExtendedBadges": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO ₹50",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=867064&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "927165",
+              "name": "Viaggio Gustoso",
+              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/1/6/3d0a28e5-9ec9-446c-a263-be8f2a90b34b_1b2ef62c-f783-48f2-900a-36f57fd331f7.jpeg",
+              "locality": "South Kolkata",
+              "areaName": "South Kolkata",
+              "costForTwo": "₹300 for two",
+              "cuisines": ["Pizzas"],
+              "avgRating": 4.5,
+              "parentId": "537836",
+              "avgRatingString": "4.5",
+              "totalRatingsString": "28",
+              "promoted": true,
+              "adTrackingId": "cid=25837464~p=4~adgrpid=25837464#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=927165~eid=83e41f74-8f7a-4a76-ba59-d7f4e33d6d65~srvts=1741399272568~collid=83631",
+              "sla": {
+                "deliveryTime": 62,
+                "lastMileTravel": 5.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "60-65 mins",
+                "lastMileTravelString": "5.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2025-03-15 00:00:00",
+                "opened": true
+              },
+              "badges": {},
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "imageBased": {},
+                  "textExtendedBadges": {},
+                  "textBased": {}
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO ₹50",
+                "logoCtx": {
+                  "text": "BENEFITS"
+                }
+              },
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {},
+                "commsStyling": {}
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+                }
+              },
+              "reviewsSummary": {},
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {},
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+              "campaignId": "25837464"
+            },
+            "analytics": {},
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=927165&source=collection&query=Pizza",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+      }
+    ],
+    "firstOffsetRequest": true,
+    "nextFetch": 3
+  },
+  "tid": "7bf25930-3fb7-466f-a04c-bcd99b795266",
+  "sid": "jc691439-9239-4cd1-aa65-b2de99a49806",
+  "deviceId": "f283c630-d3c1-5a64-7710-82c0302a56f2",
+  "csrfToken": "EEL1HlkEM6Hn-VYjBB1RgYzVK84P7J-FKTE55B28"
+}

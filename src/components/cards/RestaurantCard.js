@@ -4,6 +4,7 @@ import { FcRating } from "react-icons/fc";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+ // console.log("resdata : ", resData)
 
   const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
     resData?.card?.card?.info;
@@ -11,7 +12,7 @@ const RestaurantCard = (props) => {
   const deliveryTime = resData?.card?.card?.info?.sla?.deliveryTime;
 
   return (
-    <div className="flex w-[200px]  p-1.5 border border-transparent rounded-lg flex-col bg-[antiquewhite;]  hover:scale-[0.9] duration-300 ease-in  ">
+    <div data-testid="resCard" className="flex w-[200px]  p-1.5 border border-transparent rounded-lg flex-col bg-[antiquewhite;]  hover:scale-[0.9] duration-300 ease-in  ">
       <img
         className=" w-[200px] h-[200px] object-cover rounded-lg"
         src={Card_IMG_URL + cloudinaryImageId}
