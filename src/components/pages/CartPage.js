@@ -43,7 +43,10 @@ const CartPage = () => {
                 Summary
               </p>
 
-              <p className="font-[600] text-xl text-slate-700">
+              <p
+                data-testid="totalItems"
+                className="font-[600] text-xl text-slate-700"
+              >
                 Total Items:
                 <span className="font-normal"> {cartItems.length}</span>
               </p>

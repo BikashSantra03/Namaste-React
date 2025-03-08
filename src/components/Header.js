@@ -76,7 +76,7 @@ const Header = () => {
               <div className="relative">
                 <FaCartShopping className="text-2xl" />
                 {cartItems.length > 0 && (
-                  <span
+                  <span data-testid="numberOfItemsInCart"
                     className="absolute -top-1 -right-2 bg-green-600 text-xs w-5 h-5 flex 
                     justify-center items-center animate-bounce rounded-full text-white"
                   >

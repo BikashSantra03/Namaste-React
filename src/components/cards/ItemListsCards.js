@@ -29,7 +29,7 @@ const ItemListsCards = ({ resItem, showAddbtn }) => {
     toast.error("Item removed from the Cart!");
   };
   return (
-    <div className="p-2 m-2 border-b-2 flex justify-between">
+    <div data-testid="resitems" className="p-2 m-2 border-b-2 flex justify-between">
       <div className="w-9/12 flex flex-col">
         <h2 className="font-semibold text-lg">{name}</h2>
         <p>₹{price / 100}</p>
